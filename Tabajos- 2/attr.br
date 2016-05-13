@@ -1,0 +1,59 @@
+class Objeto
+      attr_reader :position_x
+      attr_writer :position_x
+      attr_reader :position_y
+      attr_writer :position_y
+      attr_reader :weight
+      attr_writer :weight
+      def initialize(position_x,position_y,weight)
+          @position_x = position_x
+          @position_y = position_y
+          @weight = weight
+end
+       def position_x
+          return @position_x
+     end
+     def position_y
+           return @position_y
+end
+     def weight
+          return @weight
+end
+     def position_x=(position_x)
+         @position_x=position_x
+end
+     def position_y=(position_y)
+         @position_y=position_y
+end
+     def weight=(weight)
+         @weight=weight
+end
+end
+ 
+class Objeto < Weapon
+   def initialize(position_x=nil, position_y=nil, weight=nil, 
+damage=nil, sucess_msg, failure_msg)
+      super(position_x, position_y, weight)
+       @damage=damage
+       @sucess_msg=sucess_msg
+       @failure_msg=failure_msg
+end
+   def damage
+        return @damage
+end
+def   damage=(damage)
+      @damage=damage
+end 
+      def sucess_msg
+        return @sucess_msg
+end
+def   sucess_msg=(sucess_msg)
+      @sucess_msg=sucess_msg
+end
+      def failure_msg
+        return @failure_msg
+end
+def   failure_msg=(failure_msg)
+      @failure_msg=failure_msg
+end
+end
